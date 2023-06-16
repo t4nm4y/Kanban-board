@@ -1,5 +1,7 @@
 
-  # mercor
+  # Project Manager Mercor
+
+  ## A website(frontend only) to manage all your projects
 
   Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
 
