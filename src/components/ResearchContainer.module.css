@@ -1,0 +1,121 @@
+.peopleResearchChild {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+.vuesaxoutlinemessageIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.comments {
+  position: relative;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-slategray);
+  text-align: left;
+}
+.frame,
+.frame1 {
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  gap: var(--gap-8xs);
+}
+.frame {
+  width: 98px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame1 {
+  width: 56px;
+}
+.frame1,
+.frameParent,
+.peopleResearch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frameParent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 168px;
+  height: 16px;
+  gap: var(--gap-sm);
+}
+.peopleResearch {
+  position: absolute;
+  top: 132.92px;
+  left: 17.04px;
+  width: 274px;
+  height: 24px;
+  gap: var(--gap-43xl);
+}
+.research {
+  position: absolute;
+  top: 42.02px;
+  left: 21.73px;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+.button,
+.userResearchHelps {
+  position: absolute;
+  display: inline-block;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 25.83px;
+  left: 280.96px;
+  font-size: var(--font-size-base);
+  letter-spacing: -0.07em;
+  font-weight: 800;
+  font-family: var(--font-inter);
+  color: var(--color-gray);
+  text-align: left;
+}
+.userResearchHelps {
+  top: 75px;
+  left: 19.92px;
+  color: var(--color-slategray);
+  width: 274px;
+}
+.high {
+  position: relative;
+  font-weight: 500;
+}
+.priorityHigh {
+  position: absolute;
+  top: 13.93px;
+  left: 23.14px;
+  border-radius: var(--br-9xs);
+  background-color: var(--color-lightcoral-200);
+  width: 39px;
+  height: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-lightcoral-100);
+}
+.cardResearch {
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-white);
+  width: 314px;
+  height: 177px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+}
