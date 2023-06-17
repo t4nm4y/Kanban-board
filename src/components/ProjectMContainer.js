@@ -108,7 +108,7 @@ const ProjectMContainer = (props) => {
         <div className={styles.thoughtsTime}>Thoughts Time</div>
         <img className={styles.lampOnIcon} alt="" src="/lampon.svg" />
         <img
-          className={styles.thoughtsContainerChild}
+          className={styles.lampShadow}
           alt=""
           src="/ellipse-20.svg"
         />
