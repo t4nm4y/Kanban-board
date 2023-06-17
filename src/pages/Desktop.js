@@ -1,22 +1,28 @@
 import ProjectMContainer from "../components/ProjectMContainer";
-import BrainstormingContainer from "../components/BrainstormingContainer";
-import ResearchContainer from "../components/ResearchContainer";
-import Footer from "../components/Footer";
+import Card from "../components/Card";
+import CardwImg from "../components/CardwImg";
+import CardwImg2 from "../components/CardwImg2";
 import styles from "./Desktop.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+import { DragDropContext } from "react-beautiful-dnd";
 const Desktop = () => {
   const [isMenuVisible, setMenuVisible] = useState(true);
+
+  const [completed, setCompleted] = useState([]);
+  const [incomplete, setIncomplete] = useState([]);
 
   const handleButtonClick = () => {
     setMenuVisible(true);
   };
+
+
   return (
     <div className={styles.desktop}>
-      <ProjectMContainer isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}/>
+      <ProjectMContainer isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} />
       <div className={styles.mainWrap}>
         <div className={styles.navbar}>
-          <div> {!isMenuVisible && <RxHamburgerMenu className={styles.menu} size={25} color="rgb(195, 194, 202)" onClick={handleButtonClick}/>} </div>
+          <div> {!isMenuVisible && <RxHamburgerMenu className={styles.menu} size={25} color="rgb(195, 194, 202)" onClick={handleButtonClick} />} </div>
           <div className={styles.searchbar}>
             <img className={styles.searchicon} alt="" src="/searchicon.svg" />
             <input
@@ -216,53 +222,75 @@ const Desktop = () => {
                 </div>
               </div>
               <img
-                className={styles.todoContainerChild}
                 alt=""
                 src="/vector-11.svg"
               />
-              <BrainstormingContainer
-                fileIds="/group-633.svg"
-                imageFileIds="/vuesaxoutlinemessage.svg"
-                smallImageFileIds="/vuesaxlinearfolder2.svg"
-                fileCount="0 files"
-                brainstormingText="Brainstorming"
-                brainstormingDescription="Brainstorming brings team members' diverse experience into play. "
-                statusText="Low"
-                propGap="43px"
-                propWidth="168px"
-                propWidth1="56px"
-                propColor="#787486"
-                propBackgroundColor="rgba(223, 168, 116, 0.2)"
-                propWidth2="36px"
-                propColor1="#d58d49"
+      {/* <div> */}
+        {/*  card1 */}
+              <Card
+                group633="/group-633.svg"
+                vuesaxoutlinemessage="/vuesaxoutlinemessage.svg"
+                comments="12 comments"
+                vuesaxlinearfolder2="/vuesaxlinearfolder2.svg"
+                files="0 files"
+                brainstorming="Brainstorming"
+                brainstormingBringsTeamMe="Brainstorming brings team members' diverse experience into play. "
+                low="Low"
               />
-              <ResearchContainer
-                commentCount="/group-6331.svg"
-                fileCount="/vuesaxoutlinemessage1.svg"
-                commentText="10 comments"
-                userAvatarUrl="/vuesaxlinearfolder21.svg"
-                fileCountText="3 files"
-                researchText="Research"
-                wireframeText="User research helps you to create an optimal product for users."
+              <Card
+                peopleBrainstormingGap="62px"
+                group633="/group-6331.svg"
+                group633Width="44px"
+                vuesaxoutlinemessage="/vuesaxoutlinemessage1.svg"
+                comments="10 comments"
+                vuesaxlinearfolder2="/vuesaxlinearfolder21.svg"
+                files="3 files"
+                brainstorming="Research"
+                brainstormingTop="42.02px"
+                propTop="25.83px"
+                brainstormingBringsTeamMe="User research helps you to create an optimal product for users."
+                priorityLowTop="13.93px"
+                priorityLowLeft="23.14px"
+                priorityLowBackgroundColor="rgba(216, 114, 125, 0.1)"
+                low="High"
+                lowColor="#d8727d"
+                frame629Width="168px"
+                frameWidth="98px"
+                cardBrainstormingOverflow="unset"
+                cardBrainstormingFlexShrink="unset"
+                frameWidth1="56px"
+                brainstormingBringsTeamMeColor="#787486"
+                priorityLowWidth="39px"
               />
-              <ResearchContainer
-                commentCount="/group-6332.svg"
-                fileCount="/vuesaxoutlinemessage2.svg"
-                commentText="2 comments"
-                userAvatarUrl="/vuesaxlinearfolder22.svg"
-                fileCountText="0 files"
-                researchText="Wireframes"
-                wireframeText="Low fidelity wireframes include the most basic content and visuals."
-                propGap="49px"
-                propWidth="63px"
-                propWidth1="162px"
-                propWidth2="92px"
-                propTop="47px"
-                propTop1="19px"
-                propTop2="20px"
-                propLeft="20px"
+              <Card
+                peopleBrainstormingGap="49px"
+                group633="/group-6332.svg"
+                group633Width="63px"
+                vuesaxoutlinemessage="/vuesaxoutlinemessage2.svg"
+                comments="2 comments"
+                vuesaxlinearfolder2="/vuesaxlinearfolder22.svg"
+                files="0 files"
+                brainstorming="Wireframes"
+                brainstormingTop="47px"
+                propTop="19px"
+                brainstormingBringsTeamMe="Low fidelity wireframes include the most basic content and visuals."
+                priorityLowTop="20px"
+                priorityLowLeft="20px"
+                priorityLowBackgroundColor="rgba(216, 114, 125, 0.1)"
+                low="High"
+                lowColor="#d8727d"
+                frame629Width="162px"
+                frameWidth="92px"
+                cardBrainstormingOverflow="unset"
+                cardBrainstormingFlexShrink="unset"
+                frameWidth1="56px"
+                brainstormingBringsTeamMeColor="#787486"
+                priorityLowWidth="39px"
               />
+        {/* </div> */}
+
             </div>
+
             <div className={styles.onprogressContainer}>
               <div className={styles.header2}>
                 <div className={styles.toDo}>On Progress</div>
@@ -276,59 +304,19 @@ const Desktop = () => {
                 alt=""
                 src="/vector-12.svg"
               />
-              <div className={styles.caradOnboarding}>
-                <img
-                  className={styles.unsplashmicqqgydq6wIcon}
-                  alt=""
-                  src="/unsplashmicqqgydq6w@2x.png"
-                />
-                <div className={styles.peopleOnprogress}>
-                  <button className={styles.vuesaxlinearfolder2Parent}>
-                    <img
-                      className={styles.vuesaxlinearfolder2Icon}
-                      alt=""
-                      src="/vuesaxlinearfolder23.svg"
-                    />
-                    <img
-                      className={styles.vuesaxoutlinemessageIcon}
-                      alt=""
-                      src="/vuesaxoutlinemessage3.svg"
-                    />
-                    <div className={styles.comments}>14 comments</div>
-                    <div className={styles.files}>15 files</div>
-                  </button>
-                  <img
-                    className={styles.peopleOnprogressChild}
-                    alt=""
-                    src="/ellipse-151@2x.png"
-                  />
-                  <img
-                    className={styles.peopleOnprogressItem}
-                    alt=""
-                    src="/ellipse-131@2x.png"
-                  />
-                  <img
-                    className={styles.peopleOnprogressInner}
-                    alt=""
-                    src="/ellipse-121@2x.png"
-                  />
-                </div>
-                <div
-                  className={styles.onboardingIllustrations}
-                >{`Onboarding Illustrations `}</div>
-                <button className={styles.button}>. . .</button>
-                <div className={styles.priorityLow}>
-                  <div className={styles.low}>Low</div>
-                </div>
-              </div>
-              <Footer
-                productIds="/vuesaxlinearfolder22.svg"
-                productIdsArray="/vuesaxoutlinemessage4.svg"
+
+        {/*  card1 ||||||||||||||||||||||||||||||||| ---------------*/}
+              <CardwImg />
+              <CardwImg2
+                vuesaxlinearfolder2="/vuesaxlinearfolder22.svg"
+                vuesaxoutlinemessage="/vuesaxoutlinemessage4.svg"
               />
-              <Footer
-                productIds="/vuesaxlinearfolder24.svg"
-                productIdsArray="/vuesaxoutlinemessage5.svg"
+              <CardwImg2
+                vuesaxlinearfolder2="/vuesaxlinearfolder24.svg"
+                vuesaxoutlinemessage="/vuesaxoutlinemessage5.svg"
               />
+
+
             </div>
             <div className={styles.doneContainer}>
               <div className={styles.header3}>
@@ -343,6 +331,7 @@ const Desktop = () => {
                 alt=""
                 src="/vector-13.svg"
               />
+              {/*  card1 ||||||||||||||||||||||||||||||||| ---------------*/}
               <div className={styles.cardMobileappdesign}>
                 <div className={styles.cardMobileappdesignChild} />
                 <img
@@ -379,24 +368,34 @@ const Desktop = () => {
                   <div className={styles.low}>Completed</div>
                 </div>
               </div>
-              <BrainstormingContainer
-                fileIds="/group-6333.svg"
-                imageFileIds="/vuesaxoutlinemessage2.svg"
-                smallImageFileIds="/vuesaxlinearfolder26.svg"
-                fileCount="15 files"
-                brainstormingText="Design System"
-                brainstormingDescription="It just needs to adapt the UI from what you did before "
-                statusText="Completed"
-                propOverflow="hidden"
-                propFlexShrink="0"
-                propGap="37px"
-                propWidth="174px"
-                propWidth1="62px"
-                propColor="#0d062d"
-                propBackgroundColor="rgba(131, 194, 157, 0.2)"
-                propWidth2="76px"
-                propColor1="#68b266"
+
+              {/*  card2 ||||||||||||||||||||||||||||||||| ---------------*/}
+              <Card
+                peopleBrainstormingGap="37px"
+                group633="/group-6333.svg"
+                group633Width="63px"
+                vuesaxoutlinemessage="/vuesaxoutlinemessage2.svg"
+                comments="12 comments"
+                vuesaxlinearfolder2="/vuesaxlinearfolder26.svg"
+                files="15 files"
+                brainstorming="Design System"
+                brainstormingTop="47px"
+                propTop="19px"
+                brainstormingBringsTeamMe="It just needs to adapt the UI from what you did before "
+                priorityLowTop="20px"
+                priorityLowLeft="20px"
+                priorityLowBackgroundColor="rgba(131, 194, 157, 0.2)"
+                low="Completed"
+                lowColor="#68b266"
+                frame629Width="174px"
+                frameWidth="98px"
+                cardBrainstormingOverflow="hidden"
+                cardBrainstormingFlexShrink="0"
+                frameWidth1="62px"
+                brainstormingBringsTeamMeColor="#0d062d"
+                priorityLowWidth="76px"
               />
+
             </div>
           </div>
         </div>

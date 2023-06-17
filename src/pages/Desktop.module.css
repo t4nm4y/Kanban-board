@@ -493,18 +493,12 @@
   font-size: var(--font-size-xs);
   color: var(--color-dimgray);
 }
-.header1,
-.todoContainerChild {
+.header1 {
   align-self: stretch;
   position: relative;
   height: 19px;
 }
-.todoContainerChild {
-  max-width: 100%;
-  overflow: hidden;
-  height: 3px;
-  flex-shrink: 0;
-}
+
 .cardCount1,
 .todoContainer {
   display: flex;

@@ -1,7 +1,6 @@
 .brline{
   width: 100%;
   border-top: 1px solid rgb(228, 228, 228);
-
 }
 .colorfilterIcon {
   position: relative;
@@ -234,7 +233,7 @@
   top: 99px;
   left: 26px;
   width: 166px;
-  height: 103px;
+  height: fit-content;
   overflow: hidden;
   display: flex;
   flex-direction: column;
