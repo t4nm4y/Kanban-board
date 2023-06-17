@@ -252,14 +252,14 @@
 .lampOnIcon {
   position: absolute;
   top: 21px;
-  left: calc(50% - 13px);
+  left: calc(50% - 10px);
   width: 24px;
   height: 24px;
 }
-.thoughtsContainerChild {
+.lampShadow {
   position: absolute;
   top: -18px;
-  left: calc(50% - 51px);
+  left: calc(50% - 50px);
   width: 101px;
   height: 101px;
 }
@@ -285,7 +285,6 @@
   font-size: var(--font-size-xs);
   color: var(--color-gray);
   font-family: var(--font-inter);
-
 }
 @media screen and (max-width: 1400px) {
   .menuContainer {
@@ -294,6 +293,5 @@
     left: 0;
     z-index: 999;
     background-color: rgb(255, 255, 255);
-    /* display: block; */
   }
 }

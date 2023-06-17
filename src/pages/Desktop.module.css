@@ -3,6 +3,9 @@
   width: 22px;
   height: 22px;
 }
+.container_inner{
+  padding: 10px;
+}
 .searchbox {
   border: 0;
   font-family: var(--font-inter);
@@ -511,7 +514,6 @@
   padding: var(--padding-xl);
   justify-content: center;
   gap: var(--gap-4xl);
-  z-index: 2;
 }
 .cardCount1 {
   position: absolute;
@@ -675,7 +677,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-4xl);
-  z-index: 1;
 }
 .done {
   position: absolute;
@@ -818,7 +819,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-4xl);
-  z-index: 0;
 }
 .cardContainers,
 .currproject {
@@ -833,6 +833,7 @@
   align-items: flex-start;
   justify-content: space-between;
   font-size: var(--font-size-base);
+  padding-top: 25px;
 }
 .currproject {
   margin-top: 15px;
@@ -865,38 +866,46 @@
   color: var(--color-gray);
   font-family: var(--font-inter);
 }
-/* .menu{
+.menu{
   position: absolute;
-  top: 25px;
-  left: 25px;
-} */
-@media screen and (max-width: 1050px){
+  top: 30px;
+  left: 45px;
+  }
+@media screen and (max-width: 1180px){
   .cardContainers{
     flex-direction: column;
     gap: var(--gap-xl);
     align-items: center;
   }
 }
-@media screen and (max-width: 1123px){
-  .menu{
-  position: absolute;
-  top: 25px;
-  left: 25px;
+@media screen and (max-width: 1000px){
+  .searchbar{
+    width: 350px;
   }
 }
 @media screen and (max-width: 900px){
+  .menu{
+    left:25px;
+  }
   .searchbar{
     width: 300px;
   }
 }
-@media screen and (max-width: 850px){
+@media screen and (max-width: 800px){
   .navbar {
     flex-direction: column;
     gap:10px;
     margin-top: 50px;
   }
+  .searchbar{
+    width: 350px;
+  }
+  .menu{
+    top: 20px;
+    left:45px;
+  }
 }
-@media screen and (max-width: 580px){
+@media screen and (max-width: 600px){
   .header {
     flex-direction: column;
     gap:10px;
@@ -904,8 +913,12 @@
   .navbar {
     margin-top: 90px;
   }
+  .menu{
+    left:20px;
+  }
 }
 @media screen and (max-width: 480px){
+  
   .options {
     flex-direction: column;
     gap: 10px;
@@ -913,13 +926,27 @@
   .navbar {
     margin-top: 140px;
   }
-}
-@media screen and (max-width: 420px){
   .searchbar{
     width: 250px;
+  }
+}
+@media screen and (max-width: 420px){
+  .menu{
+    position: absolute;
+    top: -20px;
+    left:50px;
+  }
+  .mainWrap{
+    scale: 0.9;
+  }
+  .rightNav {
+    justify-content: flex-start;
+    gap: 35px;
+  }
+  .searchbar{
     margin-left: 40px;
   }
-  .rightNav{
-    margin-left: 20px;
+  .navbar {
+    margin-top: 50px;
   }
 }
