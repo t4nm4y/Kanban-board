@@ -6,8 +6,13 @@
 .container_inner{
   padding: 10px;
 }
+#input{
+  border: none;
+  outline: none;
+}
 .searchbox {
   border: 0;
+  outline: none;
   font-family: var(--font-inter);
   font-size: var(--font-size-sm);
   background-color: transparent;
@@ -27,6 +32,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 19px;
+  border: 0;
+  outline: none;
 }
 .vuesaxlinearnotificationIcon {
   position: absolute;
