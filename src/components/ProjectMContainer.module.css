@@ -198,7 +198,7 @@
 }
 .unionIcon {
   position: relative;
-  width: 222px;
+  width: 220px;
   height: 228.28px;
 }
 .writeAMessage {
@@ -252,21 +252,20 @@
 .lampOnIcon {
   position: absolute;
   top: 21px;
-  left: calc(50% - 10px);
+  left: calc(50% - 12px);
   width: 24px;
   height: 24px;
 }
 .lampShadow {
   position: absolute;
   top: -18px;
-  left: calc(50% - 50px);
+  left: calc(50% - 52px);
   width: 101px;
   height: 101px;
 }
 .thoughtsContainer {
   align-self: stretch;
   position: relative;
-  height: 242px;
   text-align: center;
   color: var(--color-slategray);
 }
@@ -274,10 +273,12 @@
   align-self: stretch;
   border-right: 1px solid var(--color-whitesmoke-200);
   box-sizing: border-box;
-  width: 240px;
+  width: 245px;
   display: flex;
   flex-direction: column;
-  padding: var(--padding-13xl) var(--padding-2xs);
+  padding-top: 33px;
+  padding-left: 11px;
+  padding-right: 11px;
   align-items: flex-start;
   justify-content: center;
   gap: var(--gap-10xl);
@@ -285,13 +286,17 @@
   font-size: var(--font-size-xs);
   color: var(--color-gray);
   font-family: var(--font-inter);
+  overflow: auto;
+  height: fit-content;
+  /* max-height: 100vh; */
 }
 @media screen and (max-width: 1400px) {
   .menuContainer {
     position: absolute;
+    /* margin-top: 32px; */
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1;
     background-color: rgb(255, 255, 255);
   }
 }

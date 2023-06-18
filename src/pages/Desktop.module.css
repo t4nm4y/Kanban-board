@@ -149,7 +149,7 @@
   gap: 60px;
 }
 .navbar {
-  margin-top: 14px;
+  /* margin-top: 14px; */
   align-self: stretch;
   border-bottom: 1px solid #e4e4e4;
   height: fit-content;
@@ -843,13 +843,22 @@
   padding-top: 25px;
 }
 .currproject {
-  margin-top: 15px;
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
+  overflow: auto;
 }
+/* for hiding the scroll bar */
+.currproject::-webkit-scrollbar {
+  display: none;
+}
+.currproject{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .desktop,
 .mainWrap {
   display: flex;
@@ -860,14 +869,19 @@
   align-self: stretch;
   flex: 1;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: fit-content;
 }
+
+
 .desktop {
-  position: relative;
+  position: absolute;
   background-color: var(--color-white);
   width: 100%;
-  height: 932px;
+  height: 100vh;
   flex-direction: row;
-  gap: 2px;
+  /* gap: 2px; */
   text-align: left;
   font-size: 46px;
   color: var(--color-gray);
@@ -901,47 +915,44 @@
 @media screen and (max-width: 800px){
   .navbar {
     flex-direction: column;
-    gap:10px;
-    margin-top: 50px;
+    row-gap: 10px;
+    margin-top: -10px;
   }
   .searchbar{
-    width: 350px;
+    width: 400px;
   }
   .menu{
-    top: 20px;
     left:45px;
   }
+  .options {
+    padding-top: 0;
+  }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 690px){
   .header {
     flex-direction: column;
     gap:10px;
   }
-  .navbar {
-    margin-top: 90px;
+}@media screen and (max-width: 600px){
+  .options {
+    flex-direction: column;
+    gap:10px;
   }
-  .menu{
-    left:20px;
+  .searchbar{
+    width: 300px;
   }
 }
 @media screen and (max-width: 480px){
-  
-  .options {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .navbar {
-    margin-top: 140px;
-  }
   .searchbar{
     width: 250px;
+  }
+  .menu{
+    left:35px;
   }
 }
 @media screen and (max-width: 420px){
   .menu{
-    position: absolute;
-    top: -20px;
-    left:50px;
+    left:20px;
   }
   .mainWrap{
     scale: 0.9;
@@ -952,8 +963,9 @@
   }
   .searchbar{
     margin-left: 40px;
+    width: 300px;
   }
-  .navbar {
-    margin-top: 50px;
+  .desktop{
+    top:-50px;
   }
 }
