@@ -947,23 +947,25 @@
   .menu{
     left:25px;
   }
-  .mainWrap{
-    scale: 0.9;
-  }
-  .rightNav {
-    justify-content: flex-start;
-    gap: 35px;
-  }
   .searchbar{
     margin-left: 40px;
     width: 300px;
   }
+  
+}
+@media screen and (max-width: 400px){
+  .mainWrap{
+    scale: 0.9;
+  }
   .desktop{
     top:-50px;
   }
-}
-@media screen and (max-width: 400px){
   .menu{
     left:10px;
+  }
+}
+@media screen and (max-width: 380px){
+  .rightNav {
+    gap: 30px;
   }
 }

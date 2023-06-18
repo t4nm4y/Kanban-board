@@ -293,8 +293,16 @@
 @media screen and (max-width: 1400px) {
   .menuContainer {
     position: absolute;
-    /* margin-top: 32px; */
     top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+  }
+}
+@media screen and (max-width: 400px){
+  .menuContainer {
+    position: absolute;
+    top: 50px;
     left: 0;
     z-index: 1;
     background-color: rgb(255, 255, 255);
