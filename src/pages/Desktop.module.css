@@ -942,17 +942,10 @@
     width: 300px;
   }
 }
+
 @media screen and (max-width: 480px){
-  .searchbar{
-    width: 250px;
-  }
   .menu{
-    left:35px;
-  }
-}
-@media screen and (max-width: 420px){
-  .menu{
-    left:20px;
+    left:25px;
   }
   .mainWrap{
     scale: 0.9;
@@ -967,5 +960,10 @@
   }
   .desktop{
     top:-50px;
+  }
+}
+@media screen and (max-width: 400px){
+  .menu{
+    left:10px;
   }
 }
