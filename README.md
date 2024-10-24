@@ -1,5 +1,5 @@
 
-  # Project Manager Mercor
+  # Project Manager Application (Kanban Board)
 
   ## A website(frontend only) to manage all your projects
 
