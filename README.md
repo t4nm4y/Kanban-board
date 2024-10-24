@@ -1,5 +1,5 @@
 
-  # Project Manager Application (Kanban Board)
+  # Project Managment (Kanban Board)
 
   ## A website(frontend only) to manage all your projects
 
